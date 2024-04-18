@@ -14,7 +14,7 @@ const Header = () => {
                     <Link to="/">
                         <div className="header__logo-img">
                             <img
-                                src="./src/img/logo.jpg"
+                                src="https://www.hopster.tv/static/f12df19e11ee30ac52f030ee6b8d0014/f8e28/white.png"
                                 alt="logo"
                             />
                         </div>
