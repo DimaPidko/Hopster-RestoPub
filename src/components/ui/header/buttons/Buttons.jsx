@@ -5,7 +5,7 @@ const Buttons = () => {
         <div className="wrapper">
             <div className="wrapper__item">
                 <button className="wrapper__item-btn">
-                    Забронювати{' '}
+                    Забронювати
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512">
@@ -15,7 +15,7 @@ const Buttons = () => {
             </div>
             <div className="wrapper__item">
                 <button className="wrapper__item-btn">
-                    Доставка{' '}
+                    Доставка
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512">
