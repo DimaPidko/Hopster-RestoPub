@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Navigation from './navigation/Navigation';
 import Buttons from './buttons/Buttons';
 
-import './Header.sass';
-
 const Header = () => {
     return (
         <header className="header">

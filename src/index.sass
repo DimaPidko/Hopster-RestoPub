@@ -5,3 +5,169 @@
     padding: 0
     box-sizing: border-box
     font-family: "Montserrat", sans-serif
+
+.header
+    &__wrapper
+        padding: 20px 50px 20px 150px
+        background-color: #1D1D1D
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+    &__logo
+        &-img
+            top: 10px
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+            margin: 0 auto
+            position: absolute
+            img
+                width: 80px
+                height: 80px
+
+.navigation
+    &__list
+        list-style: none
+        display: flex
+        gap: 10px        
+        &-item
+            a
+                font-size: 15px
+                color: #fff
+                outline: none
+                text-decoration: none
+                text-align: center
+                font-weight: 400
+                transition: all .4s
+                &:hover
+                    border-bottom: 1px solid #fff
+                    color: #FFB400
+                    
+.wrapper
+    display: flex
+    gap: 10px
+    &__item
+        &-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 20px
+            width: 190px
+            height: 55px
+            background-color: #FFB400
+            border-radius: 30px
+            font-size: 16px
+            cursor: pointer
+        svg
+            width: 25px
+            height: 25px
+
+.promo__wrapper
+    height: 1100px
+    width: 100%
+    background: center / cover no-repeat url('https://brobar.com.ua/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmain.7f53b6cf.jpg&w=1920&q=75')
+    background-attachment: fixed
+    &__text
+        padding-top: 300px
+        &-title
+            background-color: #1D1D1D
+            width: 300px
+            margin: 0 auto
+            &_text
+                font-weight: 500
+                font-size: 54px
+                text-align: center
+                color: #fff
+        &-subtitle
+            background-color: #1D1D1D
+            width: 200px
+            margin: 15px auto
+            &_text
+                font-weight: 500
+                font-size: 20px
+                text-align: center
+                color: #fff
+
+.about__wrapper
+    padding: 80px 100px 50px 100px
+    background-color: #27272C
+    &-title
+        text-align: center
+        color: #FFB400
+        font-size: 66px
+        font-weight: 500
+    &-subtitle
+        margin: 12px auto
+        &-text
+            text-align: center
+            color: #fff
+            font-size: 20px
+            font-weight: 500
+    &-p
+        text-align: center
+        color: #fff
+        margin-top: 25px
+
+.welcome
+    background: center / cover no-repeat url('https://brobar.com.ua/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwelcome.8a7994a2.jpg&w=1920&q=75')
+    width: 100%
+    height: 760px
+
+.worktime
+    padding: 60px 0 60px 0
+    background-color: #FFB400
+    svg
+        display: block
+        margin: 0 auto
+        width: 35px
+        height: 35px
+    &__time
+        text-align: center
+        &-title
+            padding-top: 10px
+            font-weight: 500
+        &-subtitle
+            padding-top: 15px 
+            font-weight: 400
+
+.contacts
+    padding: 60px 0 60px 0
+    background-color: #27272D
+    color: #fff
+    text-align: center
+    address
+        padding-top: 10px 
+        line-height: 32px
+
+.footer
+    padding: 60px 0 60px 0
+    background-color: #1d1d1d
+    &-title
+        text-align: center
+        color: #fff
+
+.mobile
+    &-phone
+        fill: #fff
+        width: 25px
+        height: 25px
+        position: absolute
+        top: 25px
+        right: 20px
+
+@media (max-width: 1024px)
+    .header
+        &__wrapper
+            padding: 20px 0 20px 100px
+        &__logo
+            &-img
+                img
+                    width: 70px
+                    height: 70px
+
+    .wrapper
+        gap: 5px
+        &__item
+            &-btn
+                gap: 10px
+                width: 170px

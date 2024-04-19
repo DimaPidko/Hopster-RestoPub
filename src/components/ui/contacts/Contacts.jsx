@@ -1,5 +1,3 @@
-import './Contacts.sass';
-
 const Contacts = () => {
     return (
         <section className="contacts">

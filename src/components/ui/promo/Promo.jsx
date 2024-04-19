@@ -1,5 +1,3 @@
-import './Promo.sass';
-
 const Promo = () => {
     return (
         <section className="promo__wrapper">

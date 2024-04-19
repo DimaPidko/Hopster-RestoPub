@@ -1,5 +1,3 @@
-import './Welcome.sass';
-
 const Welcome = () => {
     return <section className="welcome"></section>;
 };

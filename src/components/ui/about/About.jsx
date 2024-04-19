@@ -1,5 +1,3 @@
-import './About.sass';
-
 const About = () => {
     return (
         <section className="about__wrapper">

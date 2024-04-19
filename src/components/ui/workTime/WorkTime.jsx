@@ -1,5 +1,3 @@
-import './WorkTime.sass';
-
 const WorkTime = () => {
     return (
         <section className="worktime">
