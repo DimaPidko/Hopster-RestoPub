@@ -21,7 +21,40 @@ const Navigation = () => {
     return (
         <>
             {isMobile ? (
-                <h1>123</h1>
+                <div class="hamburger-menu">
+                    <input
+                        id="menu__toggle"
+                        type="checkbox"
+                    />
+                    <label
+                        class="menu__btn"
+                        for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li>
+                            <Link
+                                to="/"
+                                className="menu__item">
+                                ГОЛОВНА
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/menu"
+                                className="menu__item">
+                                МЕНЮ
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/contacts"
+                                className="menu__item">
+                                КОНТАКТИ
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             ) : (
                 <nav className="navigation">
                     <ul className="navigation__list">
