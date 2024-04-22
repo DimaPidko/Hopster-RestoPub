@@ -10,7 +10,7 @@ const Router = () => {
     const { onModal } = useSelector((state) => state.modal);
     return (
         <BrowserRouter>
-            {!onModal && <Modal />}
+            {onModal && <Modal />}
             <Routes>
                 <Route
                     path="/"
