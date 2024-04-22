@@ -1,5 +1,8 @@
+import { useDispatch } from 'react-redux';
+import { changeModalActivity } from './ModalSlice';
+
 const Modal = () => {
-    const modal = document.querySelector('.modal__wrapper');
+    const dispatch = useDispatch();
 
     return (
         <div className="modal__wrapper">
@@ -15,7 +18,7 @@ const Modal = () => {
             </div>
             <div
                 onClick={() => {
-                    modal.classList.toggle('modal-active');
+                    dispatch(changeModalActivity());
                 }}
                 className="overlay"></div>
         </div>

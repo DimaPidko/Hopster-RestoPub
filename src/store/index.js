@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import navigation from '../components/ui/header/navigation/navigationSlice';
+import modal from '../components/ui/modal/ModalSlice';
 
 const stringMiddleWare = () => (next) => (action) => {
     if (typeof action === 'string') {
@@ -12,7 +13,7 @@ const stringMiddleWare = () => (next) => (action) => {
 };
 
 const store = configureStore({
-    reducer: { navigation },
+    reducer: { navigation, modal },
     middleware: (getDefaultMiddleWare) => getDefaultMiddleWare().concat(stringMiddleWare),
     devTools: process.env.NODE_ENV !== 'production',
 });

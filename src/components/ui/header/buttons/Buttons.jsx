@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { handleResize } from '../navigation/navigationSlice.js';
+import { changeModalActivity } from '../../modal/ModalSlice.js';
 
 const Buttons = () => {
-    const modal = document.querySelector('.modal__wrapper');
-    // const overlay = document.querySelector('.overlay');
-
     const { isMobile } = useSelector((state) => state.navigation);
     const dispatch = useDispatch();
 
@@ -22,7 +21,7 @@ const Buttons = () => {
 
     const onReservClick = (e) => {
         e.preventDefault();
-        modal.classList.toggle('modal-active');
+        dispatch(changeModalActivity());
     };
 
     return (
