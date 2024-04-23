@@ -40,11 +40,11 @@ const Navigation = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/menu"
+                            <a
+                                href="https://expz.menu/1b161be0-8f20-495e-ac2e-ef609bd0906c"
                                 className="menu__item">
                                 МЕНЮ
-                            </Link>
+                            </a>
                         </li>
                         <li>
                             <Link
@@ -66,11 +66,11 @@ const Navigation = () => {
                             </Link>
                         </li>
                         <li className="navigation__list-item">
-                            <Link
-                                to="/menu"
+                            <a
+                                href="https://expz.menu/1b161be0-8f20-495e-ac2e-ef609bd0906c"
                                 className="navigation__list-item-link">
                                 МЕНЮ
-                            </Link>
+                            </a>
                         </li>
                         <li className="navigation__list-item">
                             <Link
