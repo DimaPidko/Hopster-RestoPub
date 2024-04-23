@@ -1,21 +1,48 @@
-import images from './data/images';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-import CustomCarousel from '../../custom/slider/Slider';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import images from './data/images';
 
 const Welcome = () => {
     return (
         <section className="welcome">
-            <CustomCarousel>
-                {images.map((image, index) => {
-                    return (
-                        <img
-                            key={index}
-                            src={image.imgURL}
-                            alt={image.imgAlt}
-                        />
-                    );
-                })}
-            </CustomCarousel>
+            <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper">
+                <SwiperSlide>
+                    <img
+                        src={images[0].imgURL}
+                        alt={images[0].imgAlt}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img
+                        src={images[1].imgURL}
+                        alt={images[1].imgAlt}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img
+                        src={images[2].imgURL}
+                        alt={images[2].imgAlt}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img
+                        src={images[3].imgURL}
+                        alt={images[3].imgAlt}
+                    />
+                </SwiperSlide>
+            </Swiper>
         </section>
     );
 };
