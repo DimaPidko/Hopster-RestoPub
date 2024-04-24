@@ -27,9 +27,7 @@ const Buttons = () => {
     return (
         <>
             {isMobile ? (
-                <a
-                    href="tel:+380668370182"
-                    style={{ position: 'fixed', bottom: '10px', right: '10px' }}>
+                <a href="tel:+380668370182">
                     <svg
                         className="mobile-phone"
                         xmlns="http://www.w3.org/2000/svg"
