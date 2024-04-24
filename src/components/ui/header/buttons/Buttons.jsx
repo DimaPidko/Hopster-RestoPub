@@ -27,7 +27,7 @@ const Buttons = () => {
     return (
         <>
             {isMobile ? (
-                <a href="tel:+380668370182">
+                <a href="tel:+380503000719">
                     <svg
                         className="mobile-phone"
                         xmlns="http://www.w3.org/2000/svg"

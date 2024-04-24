@@ -11,8 +11,8 @@ const Modal = () => {
                 <h3 className="modal__wrapper__window__phone">
                     <a
                         className="modal__wrapper__window__phone-tel"
-                        href="tel:+380668370182">
-                        +38-(066)-837-01-82
+                        href="tel:+380503000719">
+                        +38-(050)-300-07-19
                     </a>
                 </h3>
             </div>
