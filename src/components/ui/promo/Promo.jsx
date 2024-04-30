@@ -7,7 +7,7 @@ const Promo = () => {
                 </div>
                 <div className="promo__wrapper__text-subtitle">
                     <h2 className="promo__wrapper__text-subtitle_text">
-                        Від Бро для Бро
+                        Пригоди смаку у кожному ковтку
                     </h2>
                 </div>
             </div>
