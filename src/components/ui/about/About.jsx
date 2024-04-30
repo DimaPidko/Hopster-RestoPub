@@ -1,10 +1,10 @@
 const About = () => {
     return (
         <section className="about__wrapper">
-            <h2 className="about__wrapper-title">Хей, друже!</h2>
-            <div className="about__wrapper-subtitle">
+            <h2 className="about__wrapper-title">Звабливе вітання, друже!</h2>
+            {/* <div className="about__wrapper-subtitle">
                 <h3 className="about__wrapper-subtitle-text">Звабливе вітання, друже!</h3>
-            </div>
+            </div> */}
             <p className="about__wrapper-p">
                 Ласкаво просимо до Hopster - місця, де наші гості - це справжні брати. У
                 нашому рестопабі ви знайдете не лише смачні страви та напої, а й
