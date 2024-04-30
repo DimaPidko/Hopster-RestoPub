@@ -53,6 +53,13 @@ const Navigation = () => {
                                 КОНТАКТИ
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                to="/beers"
+                                className="menu__item">
+                                ПИВО
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             ) : (
@@ -77,6 +84,13 @@ const Navigation = () => {
                                 to="/contacts"
                                 className="navigation__list-item-link">
                                 КОНТАКТИ
+                            </Link>
+                        </li>
+                        <li className="navigation__list-item">
+                            <Link
+                                to="/beers"
+                                className="navigation__list-item-link">
+                                ПИВО
                             </Link>
                         </li>
                     </ul>

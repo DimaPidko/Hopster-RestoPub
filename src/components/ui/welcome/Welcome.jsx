@@ -11,7 +11,6 @@ const Welcome = () => {
     return (
         <section className="welcome">
             <Swiper
-                spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}

@@ -15,6 +15,7 @@
         justify-content: space-evenly
     &__logo
         &-img
+            z-index: 1
             top: 10px
             left: 50%
             transform: translateX(-50%)
@@ -24,6 +25,7 @@
             img
                 width: 80px
                 height: 80px
+
 
 .navigation
     &__list
@@ -65,7 +67,7 @@
 .promo__wrapper
     height: 1100px
     width: 100%
-    background: center / cover no-repeat url('https://brobar.com.ua/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmain.7f53b6cf.jpg&w=1920&q=75')
+    background: center / cover no-repeat url('/main.jpg')
     background-attachment: fixed
     &__text
         padding-top: 300px
@@ -234,6 +236,7 @@
   background-color: #ECEFF1
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
   transition: all .7s
+  z-index: 2
 
 .menu__item 
   display: block
@@ -302,7 +305,7 @@
 @media (max-width: 1024px)
     .header
         &__wrapper
-            padding: 20px 0 20px 100px
+            padding: 20px 0 20px 0
         &__logo
             &-img
                 img
@@ -325,8 +328,8 @@
             &-img
                 top: 6px
                 img
-                    width: 45px
-                    height: 45px
+                    width: 50px
+                    height: 50px
 
 @media (max-width: 425px)
     .about__wrapper

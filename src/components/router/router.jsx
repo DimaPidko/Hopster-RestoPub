@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Main from '../app/main/Main';
 import Menu from '../app/menu/Menu';
 import Contacts from '../app/contacts/Contacts';
+import Beers from '../app/beers/Beers';
 import Modal from '../ui/modal/Modal';
 
 const Router = () => {
@@ -23,6 +24,10 @@ const Router = () => {
                 <Route
                     path="/contacts"
                     element={<Contacts />}
+                />
+                <Route
+                    path="/beers"
+                    element={<Beers />}
                 />
             </Routes>
         </BrowserRouter>
