@@ -53,13 +53,13 @@ const Navigation = () => {
                                 КОНТАКТИ
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 to="/beers"
                                 className="menu__item">
                                 ПИВО
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             ) : (
@@ -86,13 +86,13 @@ const Navigation = () => {
                                 КОНТАКТИ
                             </Link>
                         </li>
-                        <li className="navigation__list-item">
+                        {/* <li className="navigation__list-item">
                             <Link
                                 to="/beers"
                                 className="navigation__list-item-link">
                                 ПИВО
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             )}
