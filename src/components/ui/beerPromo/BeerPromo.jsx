@@ -31,15 +31,15 @@ const BeerPromo = () => {
             beerImg.forEach((_, index) => {
                 const blockTop = isMobile ? index * 520 : index * 750;
                 const isVisible = isMobile
-                    ? index === 0 ||
-                      (scrollY > blockTop - threshold && scrollY < blockTop + 500)
-                    : index === 0 ||
-                      (scrollY > blockTop - threshold && scrollY < blockTop + 750);
+                    ? scrollY > blockTop - threshold && scrollY < blockTop + 500
+                    : scrollY > blockTop - threshold && scrollY < blockTop + 750;
 
-                if (isVisible) newVisibleIndexes.push(index);
+                if (isVisible && !visibleIndexes.includes(index)) {
+                    newVisibleIndexes.push(index);
+                }
             });
 
-            setVisibleIndexes(newVisibleIndexes);
+            setVisibleIndexes((prevIndexes) => [...prevIndexes, ...newVisibleIndexes]);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -57,17 +57,16 @@ const BeerPromo = () => {
                     key={index}
                     beer={beer}
                     isVisible={visibleIndexes.includes(index)}
-                    index={index}
                 />
             ))}
         </div>
     );
 };
 
-const AnimatedBlock = ({ beer, isVisible, index }) => {
+const AnimatedBlock = ({ beer, isVisible }) => {
     const animation = useSpring({
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateX(0)' : `translateX(-100%)`,
+        transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
     });
 
     return (
