@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 
-import './index.sass';
+import './styles/main.sass';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
