@@ -180,17 +180,28 @@ body
                     height: 50px
 
 @media (max-width: 425px)
-    .about__wrapper
-        padding: 80px 50px 50px 50px
-        &-title
-            font-size: 56px
-        &-subtitle
-            &-text
-                font-size: 20px
-        &-p
-            font-size: 14px
-    .promo__wrapper
-        background: center / cover no-repeat url('/main.jpg')
+  .beer__wrapper
+      width: 300px
+      &-img
+          width: 300px
+          height: 300px
+      &-title
+          color: #fff
+          font-weight: 600
+      &-descr
+          color: #fff
+          font-weight: 300
+  .about__wrapper
+      padding: 80px 50px 50px 50px
+      &-title
+          font-size: 56px
+      &-subtitle
+          &-text
+              font-size: 20px
+      &-p
+          font-size: 14px
+  .promo__wrapper
+      background: center / cover no-repeat url('/main.jpg')
 @media (max-width: 320px)
     .about__wrapper
         padding: 80px 20px 50px 20px

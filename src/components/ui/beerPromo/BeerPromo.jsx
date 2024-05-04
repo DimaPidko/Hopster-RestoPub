@@ -5,19 +5,35 @@ import beerImg from './beerImg';
 
 const BeerPromo = () => {
     const [visibleIndexes, setVisibleIndexes] = useState([]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 425);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
             const windowHeight = window.innerHeight;
             const scrollY = window.scrollY;
-            const threshold = windowHeight;
+            const threshold = isMobile ? windowHeight / 2 : windowHeight;
 
             const newVisibleIndexes = [];
 
             beerImg.forEach((_, index) => {
-                const blockTop = index * 750;
-                const isVisible =
-                    scrollY > blockTop - threshold && scrollY < blockTop + 750;
+                const blockTop = isMobile ? index * 520 : index * 750;
+                const isVisible = isMobile
+                    ? scrollY > blockTop - threshold && scrollY < blockTop + 450
+                    : scrollY > blockTop - threshold && scrollY < blockTop + 750;
+
                 if (isVisible) newVisibleIndexes.push(index);
             });
 
@@ -29,7 +45,7 @@ const BeerPromo = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [isMobile]);
 
     return (
         <div>
