@@ -31,7 +31,7 @@ const BeerPromo = () => {
             beerImg.forEach((_, index) => {
                 const blockTop = isMobile ? index * 520 : index * 750;
                 const isVisible = isMobile
-                    ? scrollY > blockTop - threshold && scrollY < blockTop + 450
+                    ? scrollY > blockTop - threshold && scrollY < blockTop + 500
                     : scrollY > blockTop - threshold && scrollY < blockTop + 750;
 
                 if (isVisible) newVisibleIndexes.push(index);
