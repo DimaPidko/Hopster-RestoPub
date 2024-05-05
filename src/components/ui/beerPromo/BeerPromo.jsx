@@ -29,10 +29,10 @@ const BeerPromo = () => {
             const newVisibleIndexes = [];
 
             beerImg.forEach((_, index) => {
-                const blockTop = isMobile ? index * 520 : index * 750;
+                const blockTop = isMobile ? index * 520 : index * 720;
                 const isVisible = isMobile
                     ? scrollY > blockTop - threshold && scrollY < blockTop + 500
-                    : scrollY > blockTop - threshold && scrollY < blockTop + 750;
+                    : scrollY > blockTop - threshold && scrollY < blockTop + 700;
 
                 if (isVisible && !visibleIndexes.includes(index)) {
                     newVisibleIndexes.push(index);
@@ -71,14 +71,20 @@ const AnimatedBlock = ({ beer, isVisible }) => {
 
     return (
         <animated.div style={animation}>
-            <div className="beer__wrapper">
+            <div class="beer__wrapper">
                 <img
                     src={beer.imgURL}
                     alt={beer.imgALT}
-                    className="beer__wrapper-img"
+                    class="beer__wrapper-img"
                 />
-                <h2 className="beer__wrapper-title">{beer.title}</h2>
-                <p className="beer__wrapper-descr">{beer.description}</p>
+                <h2 class="beer__wrapper-title">{beer.title}</h2>
+                <div class="beer__wrapper-char">
+                    <h3>OG/Сусло: {beer.OG}</h3>
+                    <h3>ABV/Алкоголь: {beer.ABV}</h3>
+                    <h3>IBU/Гіркота: {beer.IBU}</h3>
+                    <h3>Color/Колір: {beer.Color}</h3>
+                </div>
+                <p class="beer__wrapper-descr">{beer.description}</p>
             </div>
         </animated.div>
     );
