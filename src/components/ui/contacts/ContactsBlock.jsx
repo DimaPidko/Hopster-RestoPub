@@ -9,9 +9,9 @@ const Contacts = () => {
             <div className="contacts__phone">
                 <a
                     className="contacts__phone-num"
-                    href="tel:+380503000719"
+                    href="tel:+380660005077"
                     target="_blank">
-                    +38-(050)-300-07-19
+                    +38(066)-000-50-77
                 </a>
             </div>
             <div className="contacts__phone">

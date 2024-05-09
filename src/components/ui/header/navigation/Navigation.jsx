@@ -57,7 +57,7 @@ const Navigation = () => {
                             <Link
                                 to="/beers"
                                 className="menu__item">
-                                ПИВО
+                                БРОВАРНЯ
                             </Link>
                         </li>
                     </ul>
@@ -90,7 +90,7 @@ const Navigation = () => {
                             <Link
                                 to="/beers"
                                 className="navigation__list-item-link">
-                                ПИВО
+                                БРОВАРНЯ
                             </Link>
                         </li>
                     </ul>
