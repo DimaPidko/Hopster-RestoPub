@@ -1,1 +1,1 @@
-PREVIEW - https://hopsterrestopub.netlify.app/
+PREVIEW - https://hopster.ua
