@@ -1,25 +1,10 @@
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
-
 import beerImg from './beerImg';
 
 const BeerPromo = () => {
     const [visibleIndexes, setVisibleIndexes] = useState([]);
-    const [isMobile, setIsMobile] = useState(false);
     const observer = useRef(null);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 425);
-        };
-
-        window.addEventListener('resize', handleResize);
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     useEffect(() => {
         const handleIntersect = (entries) => {
@@ -36,11 +21,11 @@ const BeerPromo = () => {
         };
 
         observer.current = new IntersectionObserver(handleIntersect, {
-            threshold: 0.5,
+            threshold: 0.01,
         });
 
         const elements = document.querySelectorAll('.beer__wrapper');
-        elements.forEach((element, index) => {
+        elements.forEach((element) => {
             observer.current.observe(element);
         });
 
@@ -49,7 +34,7 @@ const BeerPromo = () => {
                 observer.current.disconnect();
             }
         };
-    }, [isMobile]);
+    }, []);
 
     return (
         <div>

@@ -29,7 +29,7 @@ const Buttons = () => {
             {isMobile ? (
                 <a href="tel:+380660005077">
                     <div className="mobile-phone">
-                        <i class="fa fa-phone"></i>
+                        <i className="fa fa-phone"></i>
                     </div>
                 </a>
             ) : (
