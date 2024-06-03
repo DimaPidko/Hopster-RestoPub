@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useSpring, animated } from 'react-spring';
-import beerImg from './beerImg';
+import React, { useEffect, useRef, useState } from "react"
+import { animated, useSpring } from "react-spring"
+import beerImg from "./beerImg"
 
 const BeerPromo = () => {
     const [visibleIndexes, setVisibleIndexes] = useState([]);
@@ -21,7 +21,7 @@ const BeerPromo = () => {
         };
 
         observer.current = new IntersectionObserver(handleIntersect, {
-            threshold: 0.01,
+            threshold: 0.009,
         });
 
         const elements = document.querySelectorAll('.beer__wrapper');
@@ -34,6 +34,7 @@ const BeerPromo = () => {
                 observer.current.disconnect();
             }
         };
+        
     }, []);
 
     return (
